@@ -1,3 +1,5 @@
+package My;
+
 import java.util.logging.Logger;
 
 /**

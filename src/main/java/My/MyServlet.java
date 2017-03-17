@@ -1,3 +1,5 @@
+package My;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +24,6 @@ public class MyServlet extends HttpServlet{
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        out.println("Hello Word");
+        out.println("hello Word");
     }
 }
