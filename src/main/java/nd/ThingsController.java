@@ -1,4 +1,4 @@
-package hello;
+package nd;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +15,7 @@ import java.util.List;
 public class ThingsController {
 
     @RequestMapping("/things")
-    public List<Thing> thing(@RequestParam(value = "id")String id) {
+    public List<Thing> thing(@RequestParam(value = "id",defaultValue = "0L")String id) {
 
         if(id.equals("1"))
             return Arrays.asList(new Thing(1L,"Rascheska",12L),

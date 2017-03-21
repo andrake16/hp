@@ -24,6 +24,6 @@ public class MyServlet extends HttpServlet{
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        out.println("hello Word");
+        out.println("nd Word");
     }
 }
