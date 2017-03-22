@@ -1,4 +1,4 @@
-package nd;
+package nd.spring.entities;
 
 public class Greeting {
 

@@ -1,4 +1,4 @@
-package nd;
+package nd.spring.entities;
 
 /**
  * Created by ND on 3/20/2017.
