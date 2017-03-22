@@ -7,6 +7,9 @@ public class Category {
     private Long id;
     private String CategoryName;
 
+    public Category() {
+    }
+
     public Category(Long id, String categoryName) {
         this.id = id;
         CategoryName = categoryName;

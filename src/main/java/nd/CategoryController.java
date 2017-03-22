@@ -28,11 +28,19 @@ public class CategoryController {
         return new ResponseEntity<Category>(category1, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/categories",method = RequestMethod.POST)
-    public ResponseEntity<Category> categories(@RequestBody Category category) {
+    @RequestMapping(value = "/categoriesWOParams2",method = RequestMethod.POST)
+    public Category categoriesWOParams2() {
         Category category1 = new Category(1L, "fintiflushki");
         Category category2 = new Category(2L, "instrument");
-        return new ResponseEntity<Category>(category1, HttpStatus.OK);
+        return category1;
+    }
+
+    @RequestMapping(value = "/categories",method = RequestMethod.POST)
+    public ResponseEntity<List<Category>> categories(@RequestBody List<Category> category) {
+        Category category1 = new Category(1L, "fintiflushki");
+        Category category2 = new Category(2L, "instrument");
+
+        return new ResponseEntity<List<Category>>(Arrays.asList(category1,category2), HttpStatus.OK);
     }
 
 
