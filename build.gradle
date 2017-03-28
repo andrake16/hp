@@ -58,9 +58,7 @@ dependencies {
     //compile 'org.hibernate:hibernate-core:5.2.9.Final'
     compile 'org.hibernate:hibernate-annotations:3.5.6-Final'
 
-    compile 'com.oracle:ojdbc6:11.2.0.3'
-    //compile 'libs/ojdbc6.jar'
-    //runtime files('D:\\hp\\libs\\ojdbc6.jar')
+    compile files('libs/ojdbc6.jar')
 
 
 
