@@ -5,6 +5,7 @@ import nd.entities.Cast;
 import nd.entities.Video;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.springframework.boot.SpringApplication;
@@ -17,14 +18,13 @@ public class Application {
     public static void main(String[] args) {
         //SpringApplication.run(Application.class, args);
 
-        //sessionFactory = new Configuration().configure().buildSessionFactory();
-        //sessionFactory = new AnnotationConfiguration()
-                //.addAnnotatedClass(Video.class)
-                //.addAnnotatedClass(Actor.class)
-                //.addAnnotatedClass(Cast.class)
-                //.configure()
-                //.buildSessionFactory();
-        sessionFactory = new AnnotationConfiguration().addAnnotatedClass(Video.class).configure().buildSessionFactory();
+        sessionFactory = new Configuration().configure().buildSessionFactory();
+        sessionFactory = new AnnotationConfiguration()
+                .addAnnotatedClass(Video.class)
+                .addAnnotatedClass(Actor.class)
+                .addAnnotatedClass(Cast.class)
+                .configure()
+                .buildSessionFactory();
 
 
         Video video = new Video();
@@ -47,5 +47,13 @@ public class Application {
         session.close();
 
         //Actor actor1 = (Actor)session.get(Actor.class,new Long(1));
+
+        Video video1 = new Video();
+        Session session1 = sessionFactory.openSession();
+        session1.beginTransaction();
+        session1.saveOrUpdate();
+        session1.getTransaction().commit();
+        session1.close();
+
     }
 }
