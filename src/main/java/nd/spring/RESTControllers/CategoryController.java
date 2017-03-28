@@ -1,6 +1,6 @@
 package nd.spring.RESTControllers;
 
-import nd.spring.entities.Category;
+import nd.entities.Category;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
 package nd.spring.RESTControllers;
 
-import nd.spring.entities.Category;
-import nd.spring.entities.Thing;
+import nd.entities.Category;
+import nd.entities.Thing;
 
 import java.util.List;
 
