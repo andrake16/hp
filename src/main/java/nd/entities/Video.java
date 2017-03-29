@@ -19,6 +19,14 @@ public class Video {
     private String description;
 
 
+    public Video() {
+
+    }
+
+    public Video(Long id, String description) {
+        this.id = id;
+        this.description = description;
+    }
 
     public Long getId() {
         return id;
@@ -34,5 +42,13 @@ public class Video {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
